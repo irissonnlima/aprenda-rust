@@ -31,11 +31,13 @@ fn maskify(cc: &str) -> String {
     }
 }
 
+fn foo(){
 // APRENDIZADOS DO EX
 // uma str pode ser concatenada por meio de:
-"Irisson".to_owned() + &" Lima"
+"Irisson".to_owned() + &" Lima";
 
 // também temos que 
-let mask_length = cc.len().saturating_sub(4)
+let mask_length = cc.len().saturating_sub(4);
 // é equivalente a 
-let mask_length = cc.len() - 4
+let mask_length = cc.len() - 4;
+}
