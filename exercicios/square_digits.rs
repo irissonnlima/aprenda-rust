@@ -40,3 +40,15 @@ fn square_digits_comunidade_2(mut num: u64) -> u64 {
     }
     res
 }
+
+fn square_digits_comunidade_3(mut num: u64) -> u64 {
+    let mut res = 0;
+    let mut shift = 1;
+    while num != 0 {
+        let x = num % 10;
+        res += x * x * shift;
+        num /= 10;
+        shift *= if x > 3 {100} else {10};
+    }
+    res
+}
