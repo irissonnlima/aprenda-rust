@@ -28,3 +28,15 @@ fn square_digits_comunidade_1(num: u64) -> u64 {
         .parse()
         .expect("result isnt u64 parsable")
 }
+
+fn square_digits_comunidade_2(mut num: u64) -> u64 {
+    let mut res = 0;
+    let mut mul = 1;
+    while num != 0 {
+        let m = if num % 10 < 4 { 10 } else { 100 };
+        res += (num % 10).pow(2) * mul;
+        mul *= m;
+        num /= 10;
+    }
+    res
+}
