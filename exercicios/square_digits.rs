@@ -18,3 +18,4 @@ fn square_digits(num: u64) -> u64 {
 
     return resp;
 }
+// comunidade
