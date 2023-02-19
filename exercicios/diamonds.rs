@@ -73,3 +73,6 @@ fn print_comunidade_1(n: i32) -> Option<String> {
 
     Some(diamond)
 }
+
+// Chain -> encadeia iteradores
+// step_by -> muda o passo de um iterador
