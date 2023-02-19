@@ -41,9 +41,10 @@ fn main(){
 // solução da comunidade
 
 fn valid_parentheses_comunidade(s: &str) -> bool {
-    s.chars().try_fold(0u8, |a, c| match c {
+    s.chars()
+    .try_fold(0u8, |a, c| match c { // 0u8 valor inicial do acumulador
         '(' => Some(a + 1),
-        ')' => a.checked_sub(1),
+        ')' => a.checked_sub(1), // a--;
         _   => Some(a)
-    }).map_or(false, |r| r == 0)
+    }).map_or(false, |r| r == 0) // Se o acumulador None -> false  se não avalia seu valor
 }
